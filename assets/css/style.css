@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url(../img/Desktop/Background.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  color: rgba(251, 251, 251, 0.8);
+}
+
+.container {
+  max-width: 360px;
+  width: 100%;
+  margin: 3.5em auto 0;
+}
+
+.profile {
+  text-align: center;
+  padding: 1.5em;
+}
+
+.profile img {
+  width: 45%;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  margin: .5em auto;
+}
+
+.profile p {
+  font-weight: 500;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.links ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1em;
+
+}
+
+.links ul li a {
+  font-size: 2em;
+  font-weight: 500;
+  color: inherit;
+  padding: .5em 4.5em;
+  display: inline-flex;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: .5em;
+}
+
+.git:hover {
+  background: #fff;
+  color: #171515;
+  border: 1.5px solid #fff;
+}
+
+.linkedin:hover {
+  background: #007bb6;
+  color: white;
+  border: 1.5px solid #007bb6;
+}
+
+.instagram:hover {
+  background: #E1306C;
+  color: #fff;
+  border: 1.5 solid #E1306C;
+}
+
+.gmail:hover {
+  background: #db4a39;
+  color: #fff;
+  border: 1.5px solid #db4a39;
+}
