@@ -4,14 +4,32 @@
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: rgba(251, 251, 251, 0.8);
+  --bg-url: url(../img/dark/Background.jpg);
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --button-default-bg: rgba(255, 255, 255, 0.1);
+  --profile-border: #ccc;
+  --switch-bg: url(../mon.svg);
+}
+
+.light {
+  --text-color: #000;
+  --bg-url: url(../img/light/Background.jpg);
+  --stroke-color: rgba(0, 0, 0, 0.5);
+  --button-default-bg: rgba(0, 0, 0, 0.1);
+  --profile-border: #333;
+  --switch-bg: url(../sun.svg);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-family: 'Open Sans', sans-serif;
-  background-image: url(../img/Desktop/Background.jpg);
+  background-image: var(--bg-url);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
-  color: rgba(251, 251, 251, 0.8);
+  color: var(--text-color);
 }
 
 .container {
@@ -28,7 +46,7 @@ body {
 .profile img {
   width: 45%;
   border-radius: 50%;
-  border: 2px solid #ccc;
+  border: 2px solid var(--profile-border);
   margin: .5em auto;
 }
 
@@ -36,6 +54,43 @@ body {
   font-weight: 500;
   font-size: 1em;
   line-height: 1.5em;
+}
+
+.switch {
+  margin: 1.25em;
+  position: relative;
+  width: 4em;
+}
+
+.switch button {
+  width: 2em;
+  height: 2em;
+  background: #fff;
+  border: 0;
+  border-radius: 50%;
+  background-image: var(--switch-bg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.light .switch button {
+  right: 0;
+  left: initial;
+}
+
+.switch span {
+  display: block;
+  width: 4em;
+  height: 1.5em;
+  background: var(--button-default-bg);
+  border: 1px solid var(--stroke-color);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
 
 .links ul {
@@ -53,31 +108,31 @@ body {
   padding: .5em 4.5em;
   display: inline-flex;
   text-decoration: none;
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: var(--button-default-bg);
+  border: 1px solid var(--stroke-color);
   border-radius: .5em;
 }
 
 .git:hover {
-  background: #fff;
+  background: rgba(251, 251, 251, 0.8);
   color: #171515;
-  border: 1.5px solid #fff;
+  border: 1.5px solidvar(--text-color);
 }
 
 .linkedin:hover {
   background: #007bb6;
-  color: white;
+  color: rgba(251, 251, 251, 0.8);
   border: 1.5px solid #007bb6;
 }
 
 .instagram:hover {
   background: #E1306C;
-  color: #fff;
+  color: rgba(251, 251, 251, 0.8);
   border: 1.5 solid #E1306C;
 }
 
 .gmail:hover {
   background: #db4a39;
-  color: #fff;
+  color: rgba(251, 251, 251, 0.8);
   border: 1.5px solid #db4a39;
 }
