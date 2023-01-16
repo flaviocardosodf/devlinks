@@ -35,7 +35,8 @@ body {
 .container {
   max-width: 360px;
   width: 100%;
-  margin: 3.5em auto 0;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 .profile {
@@ -57,7 +58,7 @@ body {
 }
 
 .switch {
-  margin: 1.25em;
+  margin: 1.25em auto;
   position: relative;
   width: 4em;
 }
