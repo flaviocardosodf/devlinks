@@ -77,11 +77,11 @@ body {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  animation: deslizarBotaoBack .4s;
 }
 
 .light .switch button {
-  right: 0;
-  left: initial;
+  animation: deslizarBotaoIn .4s forwards;
 }
 
 .switch span {
@@ -136,4 +136,24 @@ body {
   background: #db4a39;
   color: rgba(251, 251, 251, 0.8);
   border: 1.5px solid #db4a39;
+}
+
+@keyframes deslizarBotaoIn {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 60%;
+  }
+}
+
+@keyframes deslizarBotaoBack {
+  from {
+    left: 60%;
+  }
+
+  to {
+    left: 0;
+  }
 }
